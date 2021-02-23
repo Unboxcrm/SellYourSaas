@@ -50,7 +50,8 @@ $arrayofjs=array(
 	'/includes/jstz/jstz.min.js'.(empty($conf->dol_use_jmobile)?'':'?version='.urlencode(DOL_VERSION)),
 	'/core/js/dst.js'.(empty($conf->dol_use_jmobile)?'':'?version='.urlencode(DOL_VERSION))
 );
-$titleofpage=$langs->trans('Login').' @ '.$titletruedolibarrversion;	// $titletruedolibarrversion is defined by dol_loginfunction in security2.lib.php. We must keep the @, some tools use it to know it is login page and find true dolibarr version.
+$titleofpage=$langs->trans('Login').' @ accounts';
+//$titleofpage=$langs->trans('Login').' @ '.$titletruedolibarrversion;	// $titletruedolibarrversion is defined by dol_loginfunction in security2.lib.php. We must keep the @, some tools use it to know it is login page and find true dolibarr version.
 
 $disablenofollow=1;
 if (! preg_match('/'.constant('DOL_APPLICATION_TITLE').'/', $titleofpage)) $disablenofollow=0;
